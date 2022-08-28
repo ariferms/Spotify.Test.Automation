@@ -24,13 +24,9 @@ public class HomePage {
         Assertions.assertEquals(username, actualUserName);
     }
     public void homePageControl(){
-        Assertions.assertTrue(methods.isElementVisible(By.xpath("//span[text()=\"Ana sayfa\"]"), 7));
-        Assertions.assertTrue(methods.isElementVisible(By.xpath("//span[text()=\\\"Ara\\\"]\""), 7));
-        Assertions.assertTrue(methods.isElementVisible(By.xpath("//span[text()=\"Kitaplığın\"]"),7));
-        Assertions.assertTrue(methods.isElementVisible(By.id("create-playlist-button"),7));
+        Assertions.assertTrue(methods.isElementVisible(By.xpath("//a//span[text()=\"Ana sayfa\"]"), 10));
+        Assertions.assertTrue(methods.isElementVisible(By.xpath("//a[@href=\"/search\"]"), 10));
+        Assertions.assertTrue(methods.isElementVisible(By.xpath("//span[text()=\"Kitaplığın\"]"),10));
     }
-    public void clickCreatPlayList(){
-        Assertions.assertTrue(methods.isElementClickable(By.xpath("//button[@data-testid=\"create-playlist-button\"]"),10));
-        methods.clickElement(By.xpath("//button[@data-testid=\"create-playlist-button\"]"));
-    }
+
 }

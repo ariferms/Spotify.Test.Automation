@@ -4,15 +4,15 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import testmaster.selenium.driver.Driver;
-import testmaster.selenium.pages.GuestPage;
-import testmaster.selenium.pages.HomePage;
-import testmaster.selenium.pages.LoginPage;
+import testmaster.selenium.pages.*;
 
 public class SpotifyTest extends Driver {
 
     GuestPage guestPage;
     LoginPage loginPage;
     HomePage homePage;
+    PlayListPage playListPage;
+    SearchPage searchPage;
 
     @Test
     public void loginTest(){
@@ -27,7 +27,11 @@ public class SpotifyTest extends Driver {
         loginPage.controlLoginPage();
         loginPage.validLogin("arif.ermis@tetinium.com", "Agustos2022*");
         homePage.loginControl("arifermis");
-        homePage.clickCreatPlayList();
+        homePage.homePageControl();
+        //playListPage.playListControl();
+        //playListPage.changePlayList("Spotify Listem");
+        searchPage.searchPlayList();
+        searchPage.clickToSong();
     }
 
 
@@ -36,5 +40,8 @@ public class SpotifyTest extends Driver {
         guestPage = new GuestPage();
         loginPage = new LoginPage();
         homePage = new HomePage();
+        playListPage = new PlayListPage();
+        searchPage = new SearchPage();
+
     }
 }
