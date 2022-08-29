@@ -18,17 +18,17 @@ public class SearchPage {
         methods.waitBySeconds(2);
     }
     public void clickToSong(){
-        Assertions.assertTrue(methods.isElementVisible(By.xpath("//button[@class=\"Chip__ChipComponent-ry3uox-0 khIziI\"]"),10));
-        Assertions.assertTrue(methods.isElementVisible(By.xpath("//button//span[contains(text(),\"Şarkılar\")]"),10));
-        Assertions.assertTrue(methods.isElementClickable(By.xpath("//button[@class=\"Chip__ChipComponent-ry3uox-0 khIziI\"]"),10));
-        methods.clickElement(By.xpath("//button[@class=\"Chip__ChipComponent-ry3uox-0 khIziI\"]"));
+        Assertions.assertTrue(methods.isElementVisible(By.xpath("//button[@class=\"Chip__ChipComponent-ry3uox-0 khIziI\"]"),7));
+        Assertions.assertTrue(methods.isElementVisible(By.xpath("//button//span[contains(text(),\"Şarkılar\")]"),7));
+        Assertions.assertTrue(methods.isElementClickable(By.xpath("//button//span[contains(text(),\"Şarkılar\")]"),7));
+        methods.clickElement(By.xpath("//button//span[contains(text(),\"Şarkılar\")]"));
         methods.waitBySeconds(2);
 
         for (int i = 2; i < 5; i++) {
             methods.hoverElement(By.xpath("//div[@aria-rowindex="+ i +"]"));
             //Assertions.assertTrue(methods.isElementVisible(By.xpath("//div[@aria-rowindex="+ i +"]"),10));
             //Assertions.assertTrue(methods.isElementClickable(By.xpath("//div[@aria-rowindex="+ i +"]"),10));
-            methods.clickElement(By.xpath("//div[@aria-rowindex="+ i +"]"));
+            methods.clickElement(By.xpath("//button[@aria-label=\"Daft Punk, Pharrell Williams, Nile Rodgers - Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit için diğer seçenekler\"]"));
             methods.waitBySeconds(2);
 
             methods.hoverElement(By.xpath("//button//span[text() =\"Çalma listesine ekle\"]"));
