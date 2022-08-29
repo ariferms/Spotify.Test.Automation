@@ -32,6 +32,8 @@ public class SpotifyTest extends Driver {
         //playListPage.changePlayList("Spotify Listem");
         searchPage.searchPlayList();
         searchPage.clickToSong();
+        playListPage.clickPlayList();
+        playListPage.clickSecondSong("Instant Crush", 10);
     }
 
 
