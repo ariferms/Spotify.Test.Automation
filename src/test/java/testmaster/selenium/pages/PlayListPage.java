@@ -72,6 +72,7 @@ public class PlayListPage {
         Assertions.assertTrue(methods.isElementVisible(By.xpath("//button[@aria-label=\"Spotify Listem silinsin mi?\"]"),10));
         Assertions.assertTrue(methods.isElementClickable(By.xpath("//button[@aria-label=\"Spotify Listem silinsin mi?\"]"),10));
         methods.clickElement(By.xpath("//button[@aria-label=\"Spotify Listem silinsin mi?\"]"));
+        Assertions.assertTrue(methods.isElementVisible(By.xpath("//div//div[text()=\"Kitaplığından çıkarıldı\"]"),10));
         methods.waitBySeconds(2);
     }
 
