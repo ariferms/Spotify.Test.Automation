@@ -28,12 +28,14 @@ public class SpotifyTest extends Driver {
         loginPage.validLogin("arif.ermis@tetinium.com", "Agustos2022*");
         homePage.loginControl("arifermis");
         homePage.homePageControl();
-        //playListPage.playListControl();
-        //playListPage.changePlayList("Spotify Listem");
+        playListPage.playListControl();
+        playListPage.changePlayList("Spotify Listem");
         searchPage.searchPlayList();
         searchPage.clickToSong();
         playListPage.clickPlayList();
         playListPage.clickSecondSong("Instant Crush", 10);
+        playListPage.deleteToSong(4);
+        playListPage.deleteToPlayList();
     }
 
 
