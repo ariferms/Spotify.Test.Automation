@@ -13,6 +13,7 @@ public class SpotifyTest extends Driver {
     HomePage homePage;
     PlayListPage playListPage;
     SearchPage searchPage;
+    Cookies closeCookies;
 
     @Test
     public void loginTest(){
@@ -22,6 +23,7 @@ public class SpotifyTest extends Driver {
          */
         System.out.println("Spotify");
         init();
+        closeCookies.closeCookies();
         guestPage.controlGuestPage();
         guestPage.clickLoginButton();
         loginPage.controlLoginPage();
@@ -46,6 +48,7 @@ public class SpotifyTest extends Driver {
         homePage = new HomePage();
         playListPage = new PlayListPage();
         searchPage = new SearchPage();
+        closeCookies = new Cookies();
 
     }
 }
